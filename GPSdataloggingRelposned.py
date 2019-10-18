@@ -26,6 +26,7 @@ def bintodec(k,l):
 	else:
 		for i in range(len(binary)):
 			decimal = decimal + int(binary[i])*pow(2,(len(binary)-(i+1)))
+		print(binary)
 		return decimal
 		
 
