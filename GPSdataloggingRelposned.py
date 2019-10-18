@@ -12,9 +12,9 @@ def bintodec(k,l):
 		for j in range(nzeros):
 			binary.append(0)
 		for j in range(len(k[l-i])-2):
-				binary.append(k[l-i][j+2])      #Not appending initial 0b
-
-	if(int(k[l][2])==1):
+				binary.append(int((k[l-i][j+2])))      #Not appending initial 0b
+	print(binary)
+	if(binary[0]==1):
 		for i in range(len(binary)):
 			if(binary[i] == 1):
 				binary[i] = 0
@@ -22,11 +22,11 @@ def bintodec(k,l):
 				binary[i] = 1
 			decimal = decimal + int(binary[i])*pow(2,(len(binary)-(i+1)))
 		return -(decimal+1)
-
+	
 	else:
 		for i in range(len(binary)):
 			decimal = decimal + int(binary[i])*pow(2,(len(binary)-(i+1)))
-		print(binary)
+		
 		return decimal
 		
 
